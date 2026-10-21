@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niềm đam mê bóng đá</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 20px 8%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            color: #c8102e;
+            font-size: 27px;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .navbar a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #c8102e;
+        }
+
+        .hero {
+            min-height: 430px;
+            padding: 70px 10%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            background: linear-gradient(135deg, #fff0f1, #fce0e5);
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .welcome {
+            color: #c8102e;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 46px;
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        h1 span,
+        .about h2 span {
+            color: #c8102e;
+        }
+
+        .description {
+            color: #555;
+            font-size: 17px;
+            margin-bottom: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #c8102e;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #990b22;
+        }
+
+        .hero-panel {
+            min-width: 250px;
+            padding: 35px;
+            background: #c8102e;
+            color: white;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(200, 16, 46, 0.2);
+        }
+
+        .hero-panel h2 {
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+
+        .hero-panel p {
+            font-size: 16px;
+        }
+
+        .about,
+        .skills,
+        .contact {
+            padding: 65px 10%;
+            text-align: center;
+        }
+
+        .about h2,
+        .skills h2,
+        .contact h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            color: #555;
+            font-size: 17px;
+        }
+
+        .skills {
+            background: white;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 35px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 30px 22px;
+            border-radius: 12px;
+            border: 1px solid #eee;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card h3 {
+            color: #c8102e;
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .contact {
+            background: #fff0f1;
+        }
+
+        .contact p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .contact button {
+            padding: 12px 25px;
+            background: #c8102e;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background: #990b22;
+        }
+
+        #message {
+            margin-top: 18px;
+            color: #c8102e;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .navbar ul {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px 7%;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            .hero-panel {
+                width: 100%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">BONGDA.</h2>
+
+            <ul>
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#skills">Sở thích</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-text">
+                <p class="welcome">CHÀO MỪNG ĐẾN VỚI TRANG CỦA TÔI</p>
+
+                <h1>Tôi yêu thích<br>
+                    <span>bóng đá</span>
+                </h1>
+
+                <p class="description">
+                    Bóng đá là niềm đam mê lớn nhất của tôi.
+                    Tôi thích chơi bóng, theo dõi những trận đấu
+                    hấp dẫn và cổ vũ cho đội bóng mình yêu thích.
+                </p>
+
+                <a href="#about" class="btn">Tìm hiểu thêm</a>
+            </div>
+
+            <div class="hero-panel">
+                <h2>ĐAM MÊ BÓNG ĐÁ</h2>
+                <p>
+                    Nỗ lực mỗi ngày<br>
+                    Đoàn kết cùng đồng đội<br>
+                    Không ngừng theo đuổi đam mê
+                </p>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>Về <span>bản thân tôi</span></h2>
+
+            <p>
+                Tôi là người có niềm đam mê lớn với bóng đá.
+                Tôi thích chơi bóng cùng bạn bè, xem các trận đấu
+                hấp dẫn và cổ vũ cho đội bóng yêu thích.
+                Bóng đá giúp tôi rèn luyện sức khỏe, sự kiên trì
+                và tinh thần đồng đội.
+            </p>
+        </section>
+
+        <section class="skills" id="skills">
+            <h2>Niềm đam mê bóng đá</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Chơi bóng đá</h3>
+                    <p>
+                        Tôi thích chơi bóng cùng bạn bè sau giờ học
+                        để rèn luyện sức khỏe và thư giãn.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Xem bóng đá</h3>
+                    <p>
+                        Tôi yêu thích theo dõi những trận đấu hấp dẫn
+                        và các giải bóng đá lớn trên thế giới.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Tinh thần đồng đội</h3>
+                    <p>
+                        Bóng đá giúp tôi học cách đoàn kết,
+                        phối hợp với mọi người và không bỏ cuộc.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Cùng chia sẻ niềm đam mê</h2>
+
+            <p>
+                Cảm ơn bạn đã ghé thăm trang web của tôi.
+                Bạn cũng yêu thích bóng đá chứ?
+            </p>
+
+            <button id="contactBtn">Gửi lời chào</button>
+
+            <p id="message"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 - Trang web về niềm đam mê bóng đá của tôi.</p>
+    </footer>
+
+    <script>
+        const contactBtn = document.getElementById("contactBtn");
+        const message = document.getElementById("message");
+
+        contactBtn.addEventListener("click", function() {
+            message.textContent =
+                "Xin chào! Rất vui khi được chia sẻ niềm đam mê bóng đá với bạn.";
+        });
+    </script>
+
+</body>
+</html>
